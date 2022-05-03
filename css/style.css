@@ -1,47 +1,98 @@
+@keyframes slideup {
+    from {
+      transform: translatey(20px);
+      opacity: 0%;
+    }
+    to {
+      transform: translatey(0px);
+      opacity: 100%;
+    }
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spinneroff {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid red;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 3s linear;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    margin: -76px 0 0 -54px;
-    animation-duration: 3000ms;
-    animation-fill-mode: forwards;
-
-    
-
-}
-
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(1080deg); }
+    background: rgba(255, 255, 255, 0.919);
+    opacity: 0.9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeout 0.2s 3s forwards;
   }
   
-  @keyframes spin {
-    0% { 
-        transform: rotate(0deg);
-        opacity: 0;
-        }
-    10% { 
-        transform: rotate(108deg);
-        opacity: 1;
-    }
-        50% { 
-        transform: rotate(540deg);
-        opacity: 0.5;
-        }
-        100% { 
-        transform: rotate(1080deg);
-        opacity: 0;
-        display:none;
-        }
-      
+  .spinner-1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 15px solid rgba(161, 160, 160, 0);
+    border-top: 15px solid #060dd7;
+    border-left: 15px solid #060dd7;
+    border-bottom: 15px solid #060dd7;
+    animation: spinneroff 0.8s 0.2s 5;
   }
+  
+  .spinner-2 {
+    border: 15px solid rgba(161, 160, 160, 0);
+    border-top: 15px solid #03a32e;
+    border-right: 15px solid #03a32e;
+    border-bottom: 15px solid #03a32e;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 1;
+    animation: spinner 0.8s 0.2s 5;
+    position: absolute;
+  }
+  
+  .spinner-3 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 10px solid rgba(161, 160, 160, 0);
+    border-top: 10px solid #f80303;
+    border-left: 10px solid #f80303;
+    border-bottom: 10px solid #f80303;
+    animation: spinneroff 0.8s 0.2s 5;
+  }
+
 
 
 
@@ -324,6 +375,7 @@ header{
     display: flex;
     align-items: center;
 }
+
 .fa-solid{
     margin-left: 26px;
     position: relative;
@@ -393,6 +445,7 @@ header{
 }
 .far{
     margin-right: 36px;
+    
 }
 .div-entrées{
     border-bottom: 3px solid #99e2d0;
@@ -407,18 +460,64 @@ header{
     gap:15px;
     margin-top:15px
 }
-.bouton-1{
-    box-shadow:6px 6px 8px 0px rgb(227 224 224);
-    background-color: white;
-    display:flex;
-    width: 360px;
-    height: 65px;
-    margin-left: 15px;
-    border-radius: 18px;
-    
-    
-    
+
+
+.boutons-tout-menu{
+    background: white;
+    height: 60px;
+    width: 90%;
+    margin-left: 20px;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    animation: slideup 1s forwards;
+    opacity: 0;
 }
+
+
+.boutons-tout-menu:hover .choix-menu {
+    opacity: 100%;
+    width: 60px;
+}
+.fa-regular{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.boutons-tout-menu .choix-menu {
+    background: #99e2d0;
+    cursor: pointer;
+    height: auto;
+    width: 0;
+    opacity: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+
+.boutons-tout-menu .choix-menu .iconecheck {
+    font-size: 3rem;
+    color: white;
+    transform: rotate(360deg);
+    transition: 0.4s ease-in-out;
+}
+.font-icons{
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    
+   
+}
+
 .nom-plat{
     margin-left: 15px;
     overflow: hidden;
@@ -527,6 +626,9 @@ header{
         .titre-restaurant{
            margin-left: 98px;
         }
+        .far{
+            margin-right: -10px;
+        }
         .bouton-accueil{
             width: 25%;
             margin: auto;
@@ -539,14 +641,16 @@ header{
             margin-top: 30px;
             margin-left: 15px;
         }
-        .bouton-1{
-            width:500px;
-            margin-left: 15px;
+        .boutons-tout-menu{
+            width:545px;
+           background: white;
+           height: 60px;
         }
         .zone-entrées-plats-dessert{
             display: flex;
             flex-direction: row;
             align-items: baseline;
+            margin-left: 40px;
             
         }
 }
@@ -580,7 +684,7 @@ header{
         .img-haut{
             object-position: 0px -247px;
         }
-        .bouton-1{
+        .boutons-tout-menu{
             margin-left: 30px;
             width: 700px;
         }
@@ -613,7 +717,7 @@ header{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-        }
+           }
 
         .zone-entrées-plats-dessert{
             display: flex;
