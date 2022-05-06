@@ -1,3 +1,4 @@
+A {text-decoration: none;}
 @keyframes slideup {
     from {
       transform: translatey(20px);
@@ -349,17 +350,9 @@ header{
      
  
  }
- .coeur{
-     font-size: 18px;
-     margin-bottom: 7%;
-     margin-right: -3%;
-   
-    
-     
-     
- }
+  
  
- 
+      
  .para-1{
      margin-top: 7px;
      font-size: 18px;
@@ -443,10 +436,41 @@ header{
     bottom: 59px;
 
 }
-.far{
-    margin-right: 36px;
+.border-heart{
+  
+    margin-right: -26px;
+    font-size: 23px;
+}  
     
+  
+  
+
+ .solid-heart{
+    margin-right: 25px;
+    font-size: 23px;
+    color:transparent;
+    background-image:linear-gradient(#FF79DA,#9356DC) ;
+    background-clip: text;
+    -webkit-background-clip: text; 
+    opacity: 0;
+ }
+
+  .solid-heart:hover {
+     opacity: 1;
+ }
+
+ 
+
+
+    
+
+.shop{
+   margin-right: 36px;
+   
+  
 }
+  
+
 .div-entrées{
     border-bottom: 3px solid #99e2d0;
     width: 11%;
@@ -460,7 +484,6 @@ header{
     gap:15px;
     margin-top:15px
 }
-
 
 .boutons-tout-menu{
     background: white;
@@ -484,6 +507,9 @@ header{
     font-weight: 400;
     font-size: 25px;
     margin-bottom: 15px;
+}
+.heart-menu{
+    margin-right: 30px;
 }
 
 .boutons-tout-menu .choix-menu {
@@ -584,10 +610,7 @@ header{
         margin-left: 520px;
         
         }
-        .coeur{
-            margin-right: 7%;
-            
-        }
+      
         .txt-et-icone{
             margin-top: -4px;
         }
@@ -626,9 +649,10 @@ header{
         .titre-restaurant{
            margin-left: 98px;
         }
-        .far{
-            margin-right: -10px;
+        .heart-menu{
+            margin-right: 75px;
         }
+       
         .bouton-accueil{
             width: 25%;
             margin: auto;
@@ -678,9 +702,7 @@ header{
         .txt-et-icone1{
         margin-top: -15px;
         }
-        .coeur{
-            margin-right: 0%;
-        }
+       
         .img-haut{
             object-position: 0px -247px;
         }
