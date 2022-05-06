@@ -717,6 +717,9 @@ header{
             width: 80%;
             margin: auto;
         }
+        .heart-menu {
+            margin-right: 90px;
+        }
         .boutons {
             display: flex;
             flex-direction: column;
