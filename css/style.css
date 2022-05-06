@@ -45,8 +45,9 @@ A {text-decoration: none;}
 
 .loader {
     background: rgba(255, 255, 255, 0.919);
+    
     opacity: 0.9;
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 100%;
     top: 0;
@@ -592,6 +593,7 @@ header{
 .zone-entrées-plats-dessert{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (min-width : 1201px){
