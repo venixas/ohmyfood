@@ -489,8 +489,8 @@ header{
 .boutons-tout-menu{
     background: white;
     height: 60px;
-    width: 90%;
-    margin-left: 20px;
+    width: 350px;
+    margin-left: 2px;
     display: flex;
     border-radius: 15px;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
